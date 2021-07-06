@@ -26,3 +26,20 @@ b) Erweitere dein Skript, sodass die Files aus dem Ordner `./httpdocs` ausgelese
 - Funktion zum entfernen der Fileextension `<VARIABLE>.replace(/\.[^.]*$/, "")`
 
 *Anmerkung:* Der http-Server aus der Standard Library ist natürlich nicht so umfangreich wie wir es von Express oder Koa aus node.js kennen. Dafür gibt es aber natürlich andere Web-Frameworks wie [Oak](https://deno.land/x/oak), mit diesem könnte man aber einen eigenen Workshop füllen.
+
+
+## Aufgabe 3 - Ein Einblick in Oak (Optional)
+
+Statt des http-Servers aus der Standard-Bibliothek wollen wir nun das Webframework Oak nutzen um eine kleine API für eine Todoliste aufzubauen.
+
+Hierbei sollen Folgende Routen möglich sein:
+
+- **GET** `/todos` soll alle vorhandenen Todos zurückgeben
+- **POST** `/todos` soll eine neue Todo erstellen mit angegebenem Text
+- **GET** `/todos/<ID>` soll die Todo zur angegebenen ID zurückgegeben
+
+In der Datei `./startercode-Aufgabe3.ts` findet ihr schon das Array mit den Todos und die Einbindung von Oak.
+
+
+Bonus:
+Richte die Weitere Route **PUT** `/todos/<ID>` zum updaten der Variable `done` ein.
